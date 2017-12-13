@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+>
+
+    <!--
+        <RelativeLayout
+            android:id="@+id/telephone_rl_incall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/phone_background"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/telephone_tv_incall_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="来电"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/telephone_tv_incall_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18899751483"
+                    android:textColor="#ffffff"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/telephone_btn_incall_end_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginStart="90dp"
+                android:background="@null"
+                android:text="挂断"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                />
+
+            <Button
+                android:id="@+id/telephone_btn_incall_answer_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginEnd="90dp"
+                android:background="@null"
+                android:text="接听"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+    -->
+
+
+    <LinearLayout
+        android:id="@+id/telephone_rl_outcall"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#357486"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/telephone_ll_answer_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/telephone_iv_answer_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icon"/>
+            <TextView
+                android:id="@+id/telephone_tv_answer_number"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="10086"
+                android:textColor="#ffffff"
+                android:textSize="50sp"
+                android:textStyle="bold"/>
+
+            <Chronometer
+                android:id="@+id/telephone_cm_answer_Chronometer"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:layout_gravity="center"
+                android:format="hh:mm:ss"
+                android:textSize="35dp"/>
+        </LinearLayout>
+
+
+        <!--<GridView-->
+        <!--android:id="@+id/telephone_gv_answer_menu"-->
+        <!--android:numColumns="4"-->
+        <!--android:verticalSpacing="22dp"-->
+        <!--android:layout_below="@id/telephone_ll_answer_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+        <include
+            layout="@layout/include_telephony_menu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+        />
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#000000"/>
+
+    <!--右侧页面-->
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffffff">
+        <com.example.administrator.tf_phone.view.NoScrollViewPager
+            android:id="@+id/telephone_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.example.administrator.tf_phone.view.NoScrollViewPager>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/phone_answer_contacts_top"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="通讯录"
+                    android:textColor="#ffffff"
+                    android:textSize="35dp"/>
+            </RelativeLayout>
+            <ListView
+                android:id="@+id/telephone_lv_answer_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:fastScrollEnabled="true"
+                android:scrollbarThumbVertical="@color/color_text"
+                android:scrollbarTrackVertical="@color/color_black"
+                android:scrollbars="none"/>
+
+            <!--<Button-->
+            <!--android:id="@+id/telephone_btn_answer_endcall"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_weight="0.8"-->
+            <!--android:background="@drawable/selector_answer_end_call"-->
+            <!--/>-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

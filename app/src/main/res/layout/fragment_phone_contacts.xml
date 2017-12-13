@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/phone_answer_contacts_top">
+
+        <ImageButton
+            android:id="@+id/fragment_contacts_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/back_message"
+            android:background="@null"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/fragment_contacts_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="通讯录"
+            android:textColor="#ffffff"
+            android:textSize="45dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <ListView
+            android:id="@+id/fragment_contacts_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fastScrollEnabled="true"
+            android:scrollbarThumbVertical="@color/color_text"
+            android:scrollbarTrackVertical="@color/color_black"
+            android:scrollbars="none"/>
+
+        <LinearLayout
+            android:id="@+id/fragment_contacts_ll_answer_details"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fragment_contacts_iv_answer_phone"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/icon"/>
+
+
+            <TextView
+                android:id="@+id/fragment_contacts_tv_answer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="中国移动"
+                android:textColor="#000000"
+                android:textSize="50sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/fragment_contacts_tv_answer_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="10086"
+                android:textColor="#000000"
+                android:textSize="50sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

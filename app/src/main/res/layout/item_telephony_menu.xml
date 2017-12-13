@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#d93333"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_telephony_menu_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:text="哈哈哈哈哈哈"
+        android:textSize="@dimen/text_80"
+        android:layout_below="@id/item_telephony_menu_iv"
+        android:id="@+id/item_telephony_menu_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

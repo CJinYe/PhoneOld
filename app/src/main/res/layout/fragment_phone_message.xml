@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/phone_answer_contacts_top">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/fragment_message_btn_back"
+            android:layout_marginStart="5dp"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/back_message"
+            android:background="@null"
+            />
+            <TextView
+                android:padding="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/fragment_message_number"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:maxEms="14"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="45dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/fragment_message_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="信息"
+            android:textColor="#ffffff"
+            android:textSize="45dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+    <ListView
+        android:id="@+id/fragment_message_lv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"
+        android:divider="#a4a4a4"
+        android:dividerHeight="1dp"
+        android:scrollbarThumbVertical="@color/color_text"
+        android:scrollbarTrackVertical="@color/color_black"
+        android:scrollbars="none"/>
+    <ListView
+        android:id="@+id/fragment_message_lv_details"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:fastScrollEnabled="true"
+        android:scrollbarThumbVertical="@color/color_text"
+        android:scrollbarTrackVertical="@color/color_black"
+        android:scrollbars="none"/>
+    </RelativeLayout>
+
+</LinearLayout>

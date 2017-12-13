@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:background="@drawable/phone_answer_contacts_top"
+        android:scaleType="centerCrop">
+
+        <ImageButton
+            android:id="@+id/message_add_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="20dp"
+            android:src="@drawable/back_message"/>
+
+        <ImageButton
+            android:id="@+id/message_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingLeft="20dp"
+            android:src="@drawable/cancle"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/message_add_phone_top"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="短信"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_40"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8.6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#6b6b6b"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/message_add_contacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:src="@drawable/message_add_contacts"/>
+
+                    <EditText
+                        android:id="@+id/message_add_phone_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:maxLength="11"
+                        android:text=""
+                        android:textColor="@color/color_white"
+                        android:textCursorDrawable="@color/color_text"
+                        android:textSize="@dimen/text_50"/>
+
+                    <ImageButton
+                        android:id="@+id/message_add_delete_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:src="@drawable/delete"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                >
+
+
+                    <LinearLayout
+                        android:id="@+id/message_add_ll_keyboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+
+                            <Button
+                                android:id="@+id/btn_one"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number1"/>
+
+                            <Button
+                                android:id="@+id/btn_two"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number2"/>
+
+                            <Button
+                                android:id="@+id/btn_three"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number3"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#555">
+
+                            <Button
+                                android:id="@+id/btn_four"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number4"/>
+
+                            <Button
+                                android:id="@+id/btn_five"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number5"/>
+
+                            <Button
+                                android:id="@+id/btn_six"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number6"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#666">
+
+                            <Button
+                                android:id="@+id/btn_seven"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number7"/>
+
+                            <Button
+                                android:id="@+id/btn_eight"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number8"/>
+
+                            <Button
+                                android:id="@+id/btn_nine"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number9"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="#666">
+
+                            <Button
+                                android:id="@+id/btn_jin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/numberjin"/>
+
+                            <Button
+                                android:id="@+id/btn_zero"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/number0"/>
+
+                            <Button
+                                android:id="@+id/btn_xin"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/numberxin"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    <ListView
+                        android:id="@+id/message_add_lv_contacts"
+                        android:layout_width="match_parent"
+                        android:background="#e1e0e0"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:divider="#a4a4a4"
+                        android:dividerHeight="1dp"
+                    >
+
+                    </ListView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="3.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_black"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/message_add_edt_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:background="#ffffff"
+                        android:textColor="#000000"
+                        android:gravity="top"
+                        android:hint="请在此输入信息内容！"
+                        android:textSize="@dimen/text_40"
+                    />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/message_add_voice"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/voice"/>
+
+                        <Button
+                            android:id="@+id/message_add_send"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/send"/>
+                    </LinearLayout>
+
+
+                    <!--*****************************************-->
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

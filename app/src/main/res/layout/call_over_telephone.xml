@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+    >
+
+
+        <LinearLayout
+            android:id="@+id/over_telephone_rl_outcall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#357486"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/over_telephone_ll_answer_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.3"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/over_telephone_iv_answer_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/icon"/>
+                <TextView
+                    android:id="@+id/over_telephone_tv_answer_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="10086"
+                    android:textColor="#ffffff"
+                    android:textSize="50sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/over_telephone_cm_answer_Chronometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textSize="35dp"/>
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/include_telephony_menu"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_below="@id/over_telephone_ll_answer_title"
+                android:layout_weight="1"
+            />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#000000"/>
+
+        <!--右侧页面-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.6">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/phone_answer_contacts_top"
+                    />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="通讯录"
+                        android:textColor="#ffffff"
+                        android:textSize="35dp"/>
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/over_telephone_lv_answer_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:background="#ffffff"
+                    android:fastScrollEnabled="true"
+                    android:scrollbarThumbVertical="@color/color_text"
+                    android:scrollbarTrackVertical="@color/color_black"
+                    android:scrollbars="none"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

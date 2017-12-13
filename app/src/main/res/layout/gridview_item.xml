@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/favorite_icon"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            />
+        <!--<ImageView-->
+            <!--android:id="@+id/favorite_icon"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="220dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:padding="5dp"-->
+             <!--/>-->
+            <!--android:background="@drawable/favoitv_shape" />-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:src="@drawable/favorite_back" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/favorite_phone"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#31C7EF"
+                android:textSize="@dimen/text_40"
+                android:visibility="gone" />
+
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/favorite_username"
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_40" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
